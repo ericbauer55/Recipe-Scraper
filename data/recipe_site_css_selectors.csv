@@ -1,2 +1,2 @@
 website,recipe_name,prep_time,cook_time,total_time,ingredients,servings
-https://www.allrecipes.com,#recipe-main-content,.prepTime__item:nth-child(2) span,.prepTime__item:nth-child(3) span,.ready-in-time,.added,.servings-count__desc
+https://www.allrecipes.com,#recipe-main-content,.prepTime__item:nth-child(2) span,.prepTime__item:nth-child(3) span,.ready-in-time,.added,#servings-button .ng-binding
