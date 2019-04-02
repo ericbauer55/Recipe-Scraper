@@ -3,6 +3,9 @@
 ###################################
 setwd("~/R_Programming/R_code/Recipe-Scraper")
 source("scrape_recipes.R")
+source("tidy_recipe.R")
+library(tibble)
+library(stringr)
 src_dir <- file.path(getwd(),"data")
 
 filenames <- list.files(src_dir)
@@ -12,9 +15,20 @@ filenames
 ###################################
 # Scrape HTML recipes
 ###################################
-r2 <- scrape_recipes(src_dir,"links_lunch_dishes.txt")
+rec <- scrape_recipes(src_dir,"links_lunch_dishes.txt")
 
 ###################################
-# Parse ingredients lists
+# Tidy & Parse ingredients lists
 ###################################
-rec_tab <- 0 # table of recipe information
+rec1tab <- rec[[1]] %>% tidy_recipe() # %>% parse_ingredients()
+rec2tab <- rec[[2]] %>% tidy_recipe() # %>% parse_ingredients()
+
+###################################
+# Combine Tidy Recipes into Table
+###################################
+# combine rec1tab and rec2tab with a full join
+
+###################################
+# Compute Distance between Recipes
+###################################
+

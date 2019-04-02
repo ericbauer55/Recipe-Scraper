@@ -24,6 +24,7 @@ scrape_recipes <- function(dir,txtfile){
                 tmp[[node]] <- h %>% html_node(css_site[[node]]) %>% html_text() # scrape first node 
             }
         }
+        tmp <- tmp[c("recipe_name",names(tmp)[names(tmp) != "recipe_name"])] # make "recipe_name" the first element
         recipes[[count]] <- tmp
         count <- count + 1
     }
