@@ -12,6 +12,7 @@ tidy_recipe <- function(recList){
     tidyrec[1,"ing_count"] <- length(recList$ingredients)
     # record the unparsed ingredient list
     for(ing in 1:length(recList$ingredients)){
+        # TODO: change to just sprintf("ing_%02d",ing)
         col <- str_c("ing_",sprintf("%02d",ing)) # creates ingredient number as column name, in format "ing_01"
         tidyrec[1,col] = recList$ingredients[ing] # create ingredient column populated with unparsed description
     }
