@@ -6,5 +6,7 @@ parse_ingredient <- function(ingredient){
     #            'modifier=chopped'
     parsed_ing = list(ing_name="", quantity="", unit="", modifiers="")
     
+    pattern <- "^(\\d/?\\d?) (*)$"
+    
     parsed_ing
 }

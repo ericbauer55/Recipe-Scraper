@@ -34,7 +34,7 @@ parse_recipe <- function(rec){
     
     ### Parse each ingredient, rename generic columns to specific ingredient names
     for(ing in 1:rec$ing_count){
-        plist <- parse_ingredient(rec[[sprintf("ing_%02d",ing)]])
+       # plist <- parse_ingredient(rec[[sprintf("ing_%02d",ing)]])
     }
     
     rec
